@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="header-block">
+      <button class="grid" (click)="btnClick('grid')"> Grid </button>
+      <button class="list" (click)="btnClick('list')"> List </button>
+      <select class="filter">
+        <option> Price - Low to High </option>
+        <option> Price - High to Low </option>
+      </select>
+    </div>
+    <div class="grid-div" *ngIf="showGrid">
+      <div class="grid-child" *ngFor="let item of products">
+        <img class="image" src="{{item.image}}">
+        <div class="details">
+          <p>{{item.name}}</p>
+          <p>${{item.price}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="items" *ngIf="!showGrid">
+      <span class="item" *ngFor="let item of products">
+          <img class="list-image" src="{{item.image}}" />
+          <strong>{{item.name}}</strong> <br /><br />
+          {{item.description}} <br /><br />
+          <strong>{{item.price}} </strong>
+      </span>
+    </div>
+    </div>

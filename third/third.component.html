@@ -1,0 +1,22 @@
+<header> 
+  <h1 class="center">
+    Route Three - (Using Input and Output) </h1>
+</header>
+<main class="wrapper font">
+  <div class="row">
+    <div class="column1 center">
+      <component1 [countTimer]="countValue"></component1>
+    </div>
+    <div class="column1 count">
+      <component2 (counter)="countValue=$event" (StartPauseArr)="startPauseArray=$event"></component2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column2 count">
+      <component3 [startPauseArrayVal]="startPauseArray"></component3>
+    </div>
+    <div class="column2 center">
+      <component4 [startPauseVal]="startPauseArray"></component4>
+    </div>
+  </div>
+</main>

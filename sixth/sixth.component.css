@@ -1,0 +1,32 @@
+.content{
+    max-width: 350px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgb(146, 145, 145);
+    border-radius: 3px;
+    background-color: darkgray;
+}
+
+.primaryButton{
+    background-color: #7197e9;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+.box{
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 45px;
+}

@@ -1,0 +1,26 @@
+<main>
+    <section>
+        <form class="form" #form="ngForm" (ngSubmit)= "onSubmit(form)">
+            <div>
+                <label>Enter Timer Limit : 
+                    <input type="number" name="timerLimit" #timerLimit="ngModel" ngModel min="1" required>
+                </label>
+                <p class="validation" *ngIf="timerLimit.invalid && timerLimit.dirty">
+                    Should be greater than 0</p>
+                <br><br>
+            </div>
+
+            <div>
+                <button type="submit" class="button" *ngIf="isStart"  [disabled]="!form.valid">{{buttonName}}</button>
+                <button type="submit" class="button" *ngIf="!isStart" type="submit" [disabled]="!form.valid">Pause</button>
+                <button type="reset" class="button" (click)=reset()>Reset</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <div *ngFor="let pause of pauses">
+            <span>{{pause}}</span>
+        </div>
+    </section>
+</main>

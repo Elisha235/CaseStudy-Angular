@@ -1,0 +1,17 @@
+<h1> Students Table using JSON Server API </h1>
+<hr>
+<table id="students">
+    <tr>
+    <th (click)="sortUser()" *ngFor="let col of columns">
+        {{col}}
+    </th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.class}}</td>
+        <td>{{student.section}}</td>
+        <td>{{student.sub1}}</td>
+        <td>{{student.sub2}}</td>
+        <td>{{student.sub3}}</td>
+</table>

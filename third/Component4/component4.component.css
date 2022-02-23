@@ -1,0 +1,11 @@
+.row{
+    display: flex;
+}
+
+.start{
+    flex: 50%;
+  }
+  
+.paused{
+    flex: 50%;
+}

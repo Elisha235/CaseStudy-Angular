@@ -1,0 +1,9 @@
+<div class="content">
+    <div class="container" *ngFor="let ele of box">
+      <div class="box">
+          <span>{{ele+1}}<small [innerHTML]="ordinalCheck(ele)"></small> div </span>
+          <br><br>
+          <button class="primaryButton" (click)="divClicked(ele)">Click</button>
+      </div>
+    </div>
+    </div>
